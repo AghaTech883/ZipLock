@@ -69,6 +69,7 @@ class MainFragment : BaseFragment<FragmentMainBinding>(FragmentMainBinding::infl
 
     private fun buttonClickListener() {
         with(binding) {
+
             openZipLockButton.setOnClickListener {
                 checkBiometricFirst()
 
@@ -77,7 +78,6 @@ class MainFragment : BaseFragment<FragmentMainBinding>(FragmentMainBinding::infl
     }
 
     private fun handlePortraitModeBackPress() {
-        // Check if the back button is pressed within 2 seconds
         if (backPressedTime + 2000 > System.currentTimeMillis()) {
             // If back is pressed twice within 2 seconds, finish the activity
             backToast?.cancel()  // Cancel the toast if it's still showing
